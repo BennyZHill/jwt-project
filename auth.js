@@ -40,7 +40,7 @@ const login = async (username, password, done) => {
     }
 
     const match = await bcrypt.compare(password, user.passwordHash);
-    return macth
+    return match
       ? done(null, user)
       : done(null, false, { msg: "incorrect password" });
   } catch (error) {
