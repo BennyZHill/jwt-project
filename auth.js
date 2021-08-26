@@ -5,7 +5,7 @@ const LocalStrategy = require("passport-local").Strategy;
 
 const User = require("./models/user");
 // register
-const register = (name, password, done) => {
+const register = async (name, password, done) => {
   const saltRounds = 10;
   try {
     if (!name) {
