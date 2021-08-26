@@ -16,6 +16,7 @@ app.use(express.json());
 passport.use("register", registerStrategy);
 passport.use("login", loginStrategy);
 passport.use(verifyStrategy);
+
 app.use("/user", userRouter);
 app.use("*", errorRouter); // Use error router here
 
